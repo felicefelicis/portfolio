@@ -37,56 +37,17 @@ a{
   text-decoration: none;
 }
 
-#navigationPrincipale {
-    position: fixed;
-    width: 105%;
-    height: 75px;
-    z-index: 9999;
-    background-color: rgb(241, 196, 15);
-    border-bottom: 3px solid #f2f2f2;
+#entete {
+  background: url("../images/bg4.gif") no-repeat center center;
+  background-size: cover;
+  min-width: 100vw;
+  min-height: 100vh;
 }
 
-#navigationPrincipale ul {
-  display: inline-block;
-  list-style-type: none;
-  margin: 0;
-  padding: 0;
-  position: absolute;
-  overflow: hidden;
+#entete>h1{
+  padding-top: 25vh;
 }
-#navigationPrincipale li {
-  float: right;
-  margin-right: 1px;
-  border-bottom: 2px solid #fff;
-  margin: 5px;
-}
-#navigationPrincipale li a {
-  display: block;
-  min-width: 140px;
-  line-height: 50px;
-  text-align: center;
-  text-decoration: none!important;
-  color: white;
-}
-#entete {
-  width: 100vw;
-  height: 100vh;
-  background-size: cover;
-  clear: both;
-  display: flex;
-  justify-content: space-around;
-  background-image: url(../images/bg1.jpeg);
-}
-.nom {
-  top: 0;
-  width: 90%;
-  height: 20%;
-  z-index: 5;
-  text-align: right;
-  margin-right: 0;
-  margin-top: 20%;
-  position: absolute;
-}
+
 #portfolio {
   width: 100vw;
   height: 100%;
@@ -96,20 +57,30 @@ a{
 }
 #conteneurProjet {
   width: 100%;
+  display: -webkit-box;
+  display: -ms-flexbox;
   display: flex;
-  justify-content: center;
-  flex-wrap: wrap;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
 }
 
 #conteneurLink{
   width: 100%;
+  display: -webkit-box;
+  display: -ms-flexbox;
   display: flex;
-  justify-content: center;
-  flex-wrap: wrap;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
 }
 
 #conteneurSkills{
-  height: auto;
+  height: 100%;
 }
 
 #conteneurProjet > div {
@@ -122,23 +93,21 @@ a{
 #conteneurProjet img {
   width: 800px;
 }
+
 .overItemPortfolio {
   height: 300px;
   width: 400px;
-  background-color: rgba(255, 255, 255, 0.8);
+  background-color: rgba(255, 255, 255, 0.9);
   position: absolute;
   margin: 0 auto;
   text-align: center;
   opacity: 0;
+  -webkit-transition: all 1s ease;
+  transition: all 1s ease;
 }
 
 .overItemPortfolio:hover{
   opacity: 1;
-  -webkit-transition: opacity .15s ease-in-out;
-  -moz-transition: opacity .15s ease-in-out;
-  -ms-transition: opacity .15s ease-in-out;
-  -o-transition: opacity .15s ease-in-out;
-  transition: opacity .15s ease-in-out;
 }
 
 .overItemPortfolio li:first-child {
@@ -156,7 +125,15 @@ a{
   width: 100px;
   margin: 0 auto;
   margin: 10px;
+  color:#3d3d3d;
   text-decoration: none!important;
+}
+
+.zoom:hover,
+.www:hover{
+  border-color: #f1c40f;
+  color:#f1c40f;
+  cursor: pointer;
 }
 
 .descriptionProjet{
@@ -165,7 +142,7 @@ a{
 }
 
 .quote {
-  padding-top: 75px;
+  padding-top: 50px;
   text-align: center;
 }
 .sectionTitre {
@@ -174,11 +151,10 @@ a{
 }
 #competence {
   width: 100vw;
-  height: 100vh;
-  padding-bottom: 100px;
+  height: 110vh;
   background-color: #f2f2f2;
-  padding-top: 30px;
   text-decoration: none!important;
+  padding-bottom: 30px;
 }
 #joindre {
   width: 100vw;
@@ -195,8 +171,8 @@ a{
 }
 
 #joindre p{
-	margin: 0 auto;
-	text-align: center;
+  margin: 0 auto;
+  text-align: center;
 }
 
 i{
@@ -205,36 +181,40 @@ i{
   padding: 100px 25px;
 }
 
+.fermerZoom{
+  color: #fff;
+  position: fixed;
+  top:0;
+  right: 0;
+  z-index: 20;
+  cursor: pointer;
+}
+
 /************* TEST SKILLS via codepen: https://codepen.io/triss90/pen/pjPRyW ****************/
 
 .skills {
   width: 90%;
   margin: 0 auto;
   margin-top: 10%;
+  background-color: #f2f2f2;
 }
-
 
 .skills .columnDuSkill {
   width: 50%;
   float: left;
 }
-@media (max-width: 1000px) {
-  .skills .columnDuSkill {
-    width: 100%;
-  }
-}
+
 .skills .columnDuSkill .nomSkill {
   font-size: 20px;
   text-align: center;
-  font-family: Verdana;
   color: #cccccc;
 }
 .skills .columnDuSkill .skill-icons {
   text-align: center;
 }
 .skills .columnDuSkill .skill-icons span {
-  height: 30px;
-  width: 30px;
+  height: 50px;
+  width: 50px;
   border-radius: 50%;
   display: inline-block;
   background: #cccccc;
@@ -320,22 +300,39 @@ i{
   background: #f2f2f2;
 }
 
+/*lightbox*/
+#zoomProjet{
+  display: none;
+  width: 100vw;
+  margin:0 auto;
+  position: fixed;
+  z-index: 15;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background-color: rgba(28,28,28,0.9);
+  transition: all 1s ease;
+}
+
+#zoomProjet img{
+    display: block;
+    margin: auto;
+    max-width: 70%;
+    max-height: 90vh;
+}
+
+i:hover{
+  color:#f1c40f;
+}
+
 /***********************MENU**************************************/
 @import url(http://fonts.googleapis.com/css?family=Open+Sans:100,300,400,700);
 *,
 *::before,
 *::after {
-  -webkit-box-sizing: border-box;
-  -moz-box-sizing: border-box;
   box-sizing: border-box;
 }
-
-/*.menu-opener a {
-  display: block;
-  width: 100%;
-  height: 100%;
-}*/
-
 .menu-opener, .menu-opener:hover, .menu-opener.active, .menu-opener-inner, .menu-opener-inner::before, .menu-opener-inner::after, .menu, .menu.active {
   -webkit-transition: 250ms all;
   transition: 250ms all;
@@ -372,12 +369,10 @@ i{
 }
 .menu-opener-inner::before {
   -webkit-transform: translateY(-0.75rem);
-  -ms-transform: translateY(-0.75rem);
   transform: translateY(-0.75rem);
 }
 .menu-opener-inner::after {
   -webkit-transform: translateY(0.25rem);
-  -ms-transform: translateY(0.25rem);
   transform: translateY(0.25rem);
 }
 .menu-opener-inner.active {
@@ -385,12 +380,10 @@ i{
 }
 .menu-opener-inner.active::before {
   -webkit-transform: translateY(0rem) rotate(-45deg);
-  -ms-transform: translateY(0rem) rotate(-45deg);
   transform: translateY(0rem) rotate(-45deg);
 }
 .menu-opener-inner.active::after {
   -webkit-transform: translateY(-0.5rem) translateX(0rem) rotate(45deg);
-  -ms-transform: translateY(-0.5rem) translateX(0rem) rotate(45deg);
   transform: translateY(-0.5rem) translateX(0rem) rotate(45deg);
 }
 
@@ -409,7 +402,6 @@ i{
   z-index: 10;
 }
 .menu.active {
-  width: -webkit-calc(100% - 2rem);
   width: calc(100% - 2rem);
 }
 .menu.active .menu-link {
@@ -418,12 +410,10 @@ i{
 
 .menu-inner {
   display: -webkit-box;
-  display: -webkit-flex;
   display: -ms-flexbox;
   display: flex;
   -webkit-box-orient: horizontal;
   -webkit-box-direction: normal;
-  -webkit-flex-direction: row;
   -ms-flex-direction: row;
   flex-direction: row;
   height: 100%;
@@ -436,11 +426,9 @@ i{
 .menu-link {
   color: transparent;
   display: -webkit-box;
-  display: -webkit-flex;
   display: -ms-flexbox;
   display: flex;
   -webkit-box-flex: 1;
-  -webkit-flex: 1 1 auto;
   -ms-flex: 1 1 auto;
   flex: 1 1 auto;
   font-size: 2rem;
@@ -453,6 +441,7 @@ i{
   margin: auto;
 }
 
+/***************MEDIA QUERY************/
 @media screen and (max-width: 768px) {
   .menu {
     height: auto;
@@ -465,7 +454,38 @@ i{
     font-size: 1.2em;
   }
   .menu.active {
-    width: -webkit-calc(100% - 0.5rem);
-    width: calc(100% - 0.5rem);
+    /*width: calc(100% - 0.5rem);*/
+  }
+}
+
+@media (max-width: 1000px) {
+  .skills .columnDuSkill {
+    width: 100%;
+  }
+}
+@media (max-width: 1024px) {
+  .skills .columnDuSkill .skill-icons span {
+    height: 30px;
+    width: 30px;
+  }
+  .skills .columnDuSkill {
+    width: 100%;
+  }
+  .skills .columnDuSkill .nomSkill {
+    text-align: center;
+    color: #cccccc;
+  }
+    .skills {
+    margin-top: 1%;
+  }
+}
+
+@media (max-width: 1366px) {
+  .skills .columnDuSkill .skill-icons span {
+    height: 30px;
+    width: 30px;
+  }
+  .skills {
+    margin-top: 1%;
   }
 }

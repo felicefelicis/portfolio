@@ -1,10 +1,19 @@
 <!DOCTYPE html>
 <html>
 <head>
-	<title>Blackburn</title>
+	<title>Portfolio</title>
 	<link rel="stylesheet" href="css/reset.css" />
     <link rel="stylesheet" href="css/style.css" />
     <meta charset="utf-8">
+    <meta name="description" content="Ceci est le portfolio Kathleen Blackburn, web designer et intégratrice front-end montréalaise un brin geek, très certainement 100% potterhead, mais surtout toujours de bonne humeur et en quête de défis.">
+    <meta name="portfolio, folio, front-end,  design, interface, création, graphique, création, web, art, visuel, UI, UX, conception, Montréal, Québec, kathleen, blackburn">   
+    <meta property="og:type"        content="website">
+    <meta property="og:url"         content="http://felicis.ca">
+    <meta property="og:title"       content="Felicis — Portoflio d'une montréalaise de bonne humeur">
+    <meta property="og:description" content="Portfolio de Kathleen Blackburn, web designer et intégratrice front-end montréalaise geek, potterhead et surtout en quête de défis">
+    <meta property="og:image"       content="images/likeVide.png.png">
+    <meta property="og:site_name"   content="Felicis">   
+    <meta property="og:locale" content="fr_CA">
     <script
       src="https://code.jquery.com/jquery-3.2.0.min.js"
       integrity="sha256-JAW99MJVpJBGcbzEuXk4Az05s/XyDdBomFqNlM3ic+I="
@@ -13,18 +22,10 @@
         <script src="js/skill.js"></script>
         <script src="js/animatescroll.js"></script>
     <link href="https://fonts.googleapis.com/css?family=Cabin+Sketch|Fjalla+One|Roboto+Condensed" rel="stylesheet">    
-    <script src="https://use.fontawesome.com/554fe70f22.js"></script>
+    <!--<script src="https://use.fontawesome.com/554fe70f22.js"></script>-->
+    <link rel="stylesheet" href="font-awesome-4.7.0/css/font-awesome.min.css">
 </head>
 <body>
-
-<div id="parallax">
-	<!-- <nav id="navigationPrincipale">
-		<ul>
-			<li><a href ="#portfolio" onclick="$('#portfolio').animatescroll()";>PORTFOLIO</a></li>
-			<li><a href="#competence" onclick="$('#competence').animatescroll()">COMPÉTENCES</a></li>
-			<li><a href="#joindre" onclick="$('#joindre').animatescroll()">À PROPOS</a></li>
-		</ul>
-	</nav> -->
     <nav class="menu-opener">
     <div class="menu-opener-inner"></div>
   </nav>
@@ -34,28 +35,26 @@
         <li>Portfolio</li>
       </a>
       <a href="#competence" class="menu-link" onclick="$('#competence').animatescroll();">
-        <li>Competence</li>
+        <li>Compétences</li>
       </a>
       <a href="#joindre" class="menu-link" onclick="$('#joindre').animatescroll();">
-        <li>A propos</li>
+        <li>À propos</li>
       </a>
     </ul>
   </nav>
-<div id="entete">
-	<div class="nom">
-		<h1>KATHLEEN</h1>
-		<h1>BLACKBURN</h1>
-	</div> 
+<div id="entete" class="hauteurLargeur">
+		<h1>KATHLEEN <br> BLACKBURN</h1>
 </div>
 
 <div id="portfolio">
-	<h3 class="quote">Parce qu'il faut parfois savoir être showoff</h3>
+	<h3 class="quote">Parce qu'il faut parfois savoir être show off</h3>
 	<h2 class="sectionTitre">Portfolio</h2>
-	<div id="conteneurProjet">
-		
-	</div>
+	<div id="conteneurProjet"></div>
+  <div id="zoomProjet">
+    <i class="fa fa-window-close fa-3x fermerZoom" aria-hidden="true"></i>
+    <img src="">
+  </div>
 </div>
-
 <div id="competence">
 	<h3 class="quote">J'ai des skills aussi</h3>
 	<h2 class="sectionTitre">Compétences</h2>
@@ -170,16 +169,14 @@
 </div>
 
 <div id="joindre">
-	<h3 class="quote">Ça serait pertinent de pouvoir me rejoindre n'est-ce pas?</h3>
+	<h3 class="quote">Ça serait pertinent de pouvoir me rejoindre, n'est-ce pas?</h3>
 	<h2 class="sectionTitre">Me joindre</h2>
 	<div id="conteneurLink">
-		<a href="https://www.instagram.com/felicefelicis/"><i class="fa fa-instagram fa-2x" aria-hidden="true"></i>></a> <a href="http://inwie.deviantart.com/"><i class="fa fa-deviantart fa-2x" aria-hidden="true"></i></a> <a href="https://www.linkedin.com/in/kathleen-blackburn-b459a7a3/"><i class="fa fa-linkedin fa-2x" aria-hidden="true"></i></a> <a href="https://github.com/felicefelicis"><i class="fa fa-github fa-2x" aria-hidden="true"></i></a>
+		<a href="https://www.instagram.com/felicefelicis/"><i class="fa fa-instagram fa-3x" aria-hidden="true"></i></a> <a href="http://inwie.deviantart.com/"><i class="fa fa-deviantart fa-3x" aria-hidden="true"></i></a> <a href="https://www.linkedin.com/in/kathleen-blackburn-b459a7a3/"><i class="fa fa-linkedin fa-3x" aria-hidden="true"></i></a> <a href="https://github.com/felicefelicis"><i class="fa fa-github fa-3x" aria-hidden="true"></i></a>
 	</div>
 	<a href="mailto:kthln.blackburn@gmail.com"><p>KTHLN.BLACKBURN@GMAIL.COM</p></a>
 </div>
 <footer>
-	<p>© licenses</p>
 </footer>
-</div>
 </body>
 </html>
